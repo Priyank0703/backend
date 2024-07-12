@@ -1,0 +1,36 @@
+{
+  "name": "backecom",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "API",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "nodejs-ecomm-api",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.4",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage": "^0.4.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "storage": "^0.2.0",
+    "stripe": "^16.2.0",
+    "stripe-cli": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
