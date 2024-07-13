@@ -72,25 +72,25 @@ export const getSingleWishlistCtrl = asyncHandler(async (req, res) => {
 
 //update wishlist
 
-export const updateWishlistCtrl = asyncHandler(async (req, res) => {
-    const { productId } =
-        req.body;
+// export const updateWishlistCtrl = asyncHandler(async (req, res) => {
+//     const { productId } =
+//         req.body;
 
-const wishlist = await Wishlist.findByIdAndUpdate(req.params.id,{
-    name,
+// const wishlist = await Wishlist.findByIdAndUpdate(req.params.id,{
+//     name,
 
-},{
-    new : true,
-}
+// },{
+//     new : true,
+// }
 
-)
+// )
 
-    res.json({
-        status: "success",
-        message: "wishlist updated successfully",
-        wishlist,
-    })
-})
+//     res.json({
+//         status: "success",
+//         message: "wishlist updated successfully",
+//         wishlist,
+//     })
+// })
 
 
 // Delete a wishlist
