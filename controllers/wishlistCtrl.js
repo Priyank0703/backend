@@ -37,3 +37,74 @@ export const creatWishlistCtrl = asyncHandler(async (req, res) => {
     });
 
 });
+
+
+
+// Get All Wishlists
+
+
+export const getAllWishlistCtrl = asyncHandler(async (req, res) => {
+    const wishlists = await Wishlist.find()
+
+    res.json({
+        status: "success",
+        message: "wishlists fetched successfully",
+        wishlists,
+    })
+
+
+})
+
+//get single wishlist
+
+export const getSingleWishlistCtrl = asyncHandler(async (req, res) => { 
+    const wishlist = await Wishlist.findById(req.params.id)
+
+    res.json({
+        status: "success",
+        message: "wishlist fetched  successfully",
+        wishlist
+    ,
+    })
+
+
+})
+
+//update wishlist
+
+export const updateWishlistCtrl = asyncHandler(async (req, res) => {
+    const { productId } =
+        req.body;
+
+const wishlist = await Wishlist.findByIdAndUpdate(req.params.id,{
+    name,
+
+},{
+    new : true,
+}
+
+)
+
+    res.json({
+        status: "success",
+        message: "wishlist updated successfully",
+        wishlist,
+    })
+})
+
+
+// Delete a wishlist
+
+
+export const deleteWishlistCtrl = asyncHandler(async (req, res) => {
+    await Wishlist.findByIdAndDelete(req.params.id)
+  
+    res.json({
+        status: "success",
+        message: "wishlist deleted successfully",
+    
+    })
+})
+
+
+
