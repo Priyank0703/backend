@@ -11,7 +11,7 @@ import colorsRouter from '../routes/colorRoute.js';
 import reviewsRouter from '../routes/reviewRouter.js';
 import orderRouter from '../routes/ordersRouter.js';
 import couponsRouter from '../routes/CouponsRouter.js';
-
+import wishlistRouter from '../routes/WishlistRouter.js';
 
 
 
@@ -26,6 +26,8 @@ app.use("/api/v1/colors", colorsRouter )
 app.use("/api/v1/reviews", reviewsRouter )
 app.use("/api/v1/orders", orderRouter )
 app.use("/api/v1/coupons", couponsRouter )
+app.use("/api/v1/wishlist", wishlistRouter )
+
 
  
 
